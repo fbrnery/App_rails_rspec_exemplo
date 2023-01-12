@@ -1,25 +1,53 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# app_rspec_exemplo:
 
-Things you may want to cover:
+# 1 - Gerei o projeto:
 
-* Ruby version
+ $ rails new app_rspec_exemplo -T
+ 
+ OBS: Como o -T no final, para n gerar o minitest.
+ 
+ # 2 - Adicionar ao Gemfile:
+ 
+# development / test
+ - gem 'rspec-rails', '~> 3.6'
+ - gem 'capybara'
+ 
+ Depois, rode no terminal:
+ 
+ $ bundle install
+ 
+ # 3 - Instalando o Rspec no Projeto:
+ 
+ $ rails g rspec:install
+ 
+ # 4 - Criando os BDs, vou usar o local SQLite, rode no terminal:
+ 
+ $ rails db:create
+ 
+ # 5 - Adicionar ao Gemfile:
+ 
+- gem 'spring-commands-rspec'
 
-* System dependencies
+Depois, rodar o:
 
-* Configuration
+$ bundle install
 
-* Database creation
+E rode o binário do spec:
 
-* Database initialization
+$ bundle exec spring binstub rspec
+ 
+ Para deixar o projeto mais rápido.
 
-* How to run the test suite
+# 6 - Adicionar essa configuração opcional ao config/application.rb:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# app_rspec_exemplo
+ . config.generators do |g|
+   .   g.test_framework :rspec,
+    .    fixtures: false,
+     .   view_specs: false,
+      .  helper_specs: false,
+       . : false
+     . end
+     
+     7 - Por fim, é só trabalhar.
