@@ -43,11 +43,11 @@ $ bundle exec spring binstub rspec
 # 6 - Adicionar essa configuração opcional ao config/application.rb:
 
  - config.generators do |g|
-  -    g.test_framework :rspec,
-   -     fixtures: false,
-    -    view_specs: false,
-     -   helper_specs: false,
-      -  : false
-     - end
+  -  g.test_framework :rspec,
+   -  fixtures: false,
+    - view_specs: false,
+    - helper_specs: false,
+    - : false
+    - end
      
      7 - Por fim, é só trabalhar.
