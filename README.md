@@ -50,4 +50,8 @@ $ bundle exec spring binstub rspec
     - : false
     - end
      
-     7 - Por fim, é só trabalhar.
+ # 7 - Gerando uma feature spec:
+ 
+ $ rails g rspec:feature welcome
+ 
+ -Por fim, é só trabalhar.
